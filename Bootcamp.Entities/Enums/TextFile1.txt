@@ -1,0 +1,42 @@
+﻿1. Entities Katmanı
+
+Application entity'sini oluşturunuz. İçeriği:
+Id 
+ApplicantId 
+BootcampId 
+ApplicationState (Enum: PENDING, APPROVED, REJECTED, IN_REVIEW, CANCELLED)
+Bootcamp entity'sini oluşturunuz. İçeriği:
+Id 
+Name 
+InstructorId 
+StartDate 
+EndDate 
+BootcampState (Enum: PREPARING, OPEN_FOR_APPLICATION, IN_PROGRESS, FINISHED, CANCELLED)
+Blacklist entity'sini oluşturunuz. İçeriği:
+Id 
+Reason 
+Date 
+ApplicantId 
+Not: Blacklist tablosu, belirli bir sebep nedeniyle bir öğrencinin başvuru yapmasını engelleyecek şekilde kullanılacaktır.
+
+
+
+2. Repositories Katmanı
+
+Her entity için repository yapılarını oluşturunuz 
+EntityTypeConfiguration (Fluent API) yapılandırmalarını yapınız.
+Migration işlemlerini oluşturunuz ve veritabanını güncelleyiniz. (Add-Migration / Update-Database komutlarını kullanabilirsiniz.)
+
+
+3. Business Katmanı
+
+Her entity için Request ve Response sınıflarını oluşturunuz.
+Service ve Manager yapısını oluşturunuz.
+(Örn: IApplicationService, ApplicationManager, IBootcampService, BootcampManager vs.)
+Temel CRUD işlemlerini (create, read, update, delete) service katmanında yazınız.
+
+
+4. WebAPI Katmanı
+
+Her entity için Controller sınıflarını oluşturunuz (ApplicationController, BootcampController, BlacklistController).
+API endpointlerini yazınız. (Örn: Başvuru oluştur, bootcamp oluştur, başvuru durumu güncelle, kara listeye ekle vb.)
