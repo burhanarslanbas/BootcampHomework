@@ -1,4 +1,4 @@
-namespace BootcampHomework.API
+namespace Bootcamp.API
 {
     public class WeatherForecast
     {

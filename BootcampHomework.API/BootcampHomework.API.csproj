@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Bootcamp.Repositories\BootcampHomework.Repositories.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>

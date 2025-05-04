@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace BootcampHomework.API.Controllers
+namespace Bootcamp.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
