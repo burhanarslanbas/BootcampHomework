@@ -1,4 +1,3 @@
-using BootcampHomework.Repositories.Concretes.Contexts;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

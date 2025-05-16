@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Dtos\Requests\BootcampHomework\**" />
+    <Compile Remove="Dtos\Responses\BootcampHomework\**" />
+    <EmbeddedResource Remove="Dtos\Requests\BootcampHomework\**" />
+    <EmbeddedResource Remove="Dtos\Responses\BootcampHomework\**" />
+    <None Remove="Dtos\Requests\BootcampHomework\**" />
+    <None Remove="Dtos\Responses\BootcampHomework\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="8.0.15" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Dtos\Requests\BlackList\" />
+    <Folder Include="Dtos\Responses\Application\" />
+    <Folder Include="Dtos\Responses\BlackList\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BootcampHomework.Entities\BootcampHomework.Entities.csproj" />
+    <ProjectReference Include="..\BootcampHomework.Repositories\BootcampHomework.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,5 @@
+﻿1. Projenize AutoMapper Implementasyonu yapınız.
+
+Her bir entity (örneğin Instructor, Bootcamp, Applicant) için ayrı bir Profile sınıfı oluşturun.
+Mapping işlemleri için CreateMap<TSource, TDestination>() tanımlarını yazın.
+Service Sınıflarınızda automapper implementasyonunu yapınız.
