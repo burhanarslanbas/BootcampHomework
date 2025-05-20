@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace BootcampHomework.Entities
 {
-    public class Application:BaseEntity<Guid>
+    public class Application : BaseEntity<Guid>
     {
-        public Guid ApplicantId { get; set; } 
+        public Guid ApplicantId { get; set; }
         public Guid BootcampId { get; set; }
         public ApplicationState State { get; set; } = ApplicationState.PENDING;
 

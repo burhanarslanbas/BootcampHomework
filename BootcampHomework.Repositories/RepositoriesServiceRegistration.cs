@@ -24,7 +24,6 @@ namespace BootcampHomework.Repositories
             services.AddScoped<IBootcampRepository, BootcampRepository>();
             services.AddScoped<IBlackListRepository, BlackListRepository>();
             return services;
-
         }
     }
 }

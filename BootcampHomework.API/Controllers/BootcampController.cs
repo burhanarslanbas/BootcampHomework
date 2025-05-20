@@ -16,35 +16,35 @@ namespace BootcampHomework.API.Controllers
             _bootcampService = bootcampService;
         }
 
-        [HttpPost]
+        [HttpPost("Add")]
         public IActionResult Add([FromBody] CreateBootcampRequest request)
         {
             CreatedBootcampResponse response = _bootcampService.Add(request);
             return Created(nameof(GetById), response);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("Delete/{id}")]
         public IActionResult Delete([FromRoute] DeleteBootcampRequest request)
         {
             DeletedBootcampResponse response = _bootcampService.Delete(request);
             return Ok(response);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("GetById/{id}")]
         public IActionResult GetById([FromRoute] GetByIdBootcampRequest request)
         {
             GetBootcampResponse response = _bootcampService.GetById(request);
             return Ok(response);
         }
 
-        [HttpGet]
+        [HttpGet("GetList")]
         public IActionResult GetList()
         {
             List<GetListBootcampResponse> response = _bootcampService.GetList();
             return Ok(response);
         }
 
-        [HttpPut]
+        [HttpPut("Update")]
         public IActionResult Update([FromBody] UpdateBootcampRequest request)
         {
             UpdatedBootcampResponse response = _bootcampService.Update(request);

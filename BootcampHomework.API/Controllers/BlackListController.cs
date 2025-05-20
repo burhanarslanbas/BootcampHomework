@@ -16,35 +16,35 @@ namespace BootcampHomework.API.Controllers
             _blackListService = blackListService;
         }
 
-        [HttpPost]
+        [HttpPost("Add")]
         public IActionResult Add([FromBody] CreateBlackListRequest request)
         {
             CreatedBlackListResponse response = _blackListService.Add(request);
             return Created(nameof(GetById), response);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("Delete/{id}")]
         public IActionResult Delete([FromRoute] DeleteBlackListRequest request)
         {
             DeletedBlackListResponse response = _blackListService.Delete(request);
             return Ok(response);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("GetById/{id}")]
         public IActionResult GetById([FromRoute] GetByIdBlackListRequest request)
         {
             GetBlackListResponse response = _blackListService.GetById(request);
             return Ok(response);
         }
 
-        [HttpGet]
+        [HttpGet("GetList")]
         public IActionResult GetList()
         {
             List<GetListBlackListResponse> response = _blackListService.GetList();
             return Ok(response);
         }
 
-        [HttpPut]
+        [HttpPut("Update")]
         public IActionResult Update([FromBody] UpdateBlackListRequest request)
         {
             UpdatedBlackListResponse response = _blackListService.Update(request);
